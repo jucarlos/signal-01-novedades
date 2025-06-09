@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { HeavyLoaderSlowComponent } from '@shared/heavy-loader-slow/heavy-loader-slow.component';
 import { TitleComponent } from '@shared/title/title.component';
+import { HeavyLoaderFastComponent } from "../../../shared/heavy-loader-fast/heavy-loader-fast.component";
 
 @Component({
   selector: 'app-defer-views',
