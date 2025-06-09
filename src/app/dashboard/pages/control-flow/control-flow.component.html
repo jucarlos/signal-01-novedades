@@ -1,1 +1,47 @@
-<p>control-flow works!</p>,
+<app-title [title]="'Control Flow'"></app-title>
+
+<section class="grid grid-cols-2 md:grid-cols-2 gap-2 m-2">
+
+    <div class="bg-white rounded pb-10">
+
+        <h2 class="text-2xl font-bold">IF</h2>
+        <button 
+            (click)="changeContent()"
+            class="p-2 m-3 bg-blue-500 text-white rounded">Cambiar el valor</button>
+
+        <!-- if -->
+        @if ( showContent() ) {
+        <p>Esse non cupidatat est sunt in laboris eiusmod ad. Lorem id ut sunt elit consectetur consectetur irure
+            consequat. Ea fugiat duis quis est eiusmod pariatur qui est laborum eiusmod ea voluptate do ex.</p>
+        }
+        @else {
+        <p>Pues no te muestro el contenido</p>
+        }
+
+    </div>
+
+
+    <!-- switch -->
+
+ <div class="bg-white rounded pb-10">
+
+        <h2 class="text-2xl font-bold">Switch</h2>
+        <button 
+            (click)="changeContent()"
+            class="p-2 m-3 bg-blue-500 text-white rounded">Cambiar el valor</button>
+
+        <!-- if -->
+        @if ( showContent() ) {
+        <p>Esse non cupidatat est sunt in laboris eiusmod ad. Lorem id ut sunt elit consectetur consectetur irure
+            consequat. Ea fugiat duis quis est eiusmod pariatur qui est laborum eiusmod ea voluptate do ex.</p>
+        }
+        @else {
+        <p>Pues no te muestro el contenido</p>
+        }
+
+    </div>
+
+
+
+
+</section>
