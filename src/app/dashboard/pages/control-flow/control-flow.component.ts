@@ -1,6 +1,8 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { TitleComponent } from "../../../shared/title/title.component";
 
+type Nivel = 'Primaria'|'Eso'|'Bach'|'CF'|'Otro';
+
 @Component({
   selector: 'app-control-flow',
   imports: [TitleComponent],
@@ -12,6 +14,8 @@ export default class ControlFlowComponent {
 
 
   public showContent = signal( false );
+
+  public nivel = signal<Nivel>('Eso');
 
   public changeContent() {
     this.showContent.update( ( value ) => !value )
