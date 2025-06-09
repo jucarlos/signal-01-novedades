@@ -9,11 +9,11 @@
 
         <!-- if -->
         @if ( showContent() ) {
-        <p>Esse non cupidatat est sunt in laboris eiusmod ad. Lorem id ut sunt elit consectetur consectetur irure
-            consequat. Ea fugiat duis quis est eiusmod pariatur qui est laborum eiusmod ea voluptate do ex.</p>
-        }
+            <p>Esse non cupidatat est sunt in laboris eiusmod ad. Lorem id ut sunt elit consectetur consectetur irure
+                consequat. Ea fugiat duis quis est eiusmod pariatur qui est laborum eiusmod ea voluptate do ex.</p>
+            }
         @else {
-        <p>Pues no te muestro el contenido</p>
+            <p>Pues no te muestro el contenido</p>
         }
 
     </div>
@@ -28,10 +28,10 @@
 
         @switch (nivel()) {
             @case('Primaria') {
-                <p>Tiene el título de primaria</p>
+            <p>Tiene el título de primaria</p>
             }
             @case('Bach') {
-                <p>Tiene el título de Bachiller</p>
+            <p>Tiene el título de Bachiller</p>
             }
             @case('CF') {
             <p>Tiene el título de ciclo formativo</p>
@@ -43,12 +43,57 @@
             <p>Tiene otro título</p>
             }
             @default {
-                <p>No sabemos el título que tiene</p>
+            <p>No sabemos el título que tiene</p>
             }
 
         }
 
     </div>
+
+
+    <!-- for -->
+    <div class="bg-white rounded pb-10">
+
+        <h2 class="text-2xl font-bold">For</h2>
+
+        <ul class="list-item">
+            @for( framework of frameworks() ; track $index; 
+                let i = $index; let even = $even ) {
+                
+                <li [class]="{
+                    'bg-amber-100': even,
+                    'bg-pink-400': !even
+                }" >
+                    {{ i }} - {{ framework }} - Even: {{ even }}
+                </li>
+            }
+           
+        </ul>
+
+         <h2 class="text-2xl font-bold">For sin nada</h2>
+
+         <ul class="list-item">
+            @for( framework of frameworks2() ; track $index; 
+                let i = $index; let even = $even ) {
+                <li [class]="{
+                    'bg-amber-100': even,
+                    'bg-pink-400': !even
+                }" >
+                    {{ i }} - {{ framework }} - Even: {{ even }}
+                </li>
+            }
+            @empty {
+                <li>No hay contenido</li>
+            }
+           
+        </ul>
+
+
+
+
+    </div>
+
+
 
 
 

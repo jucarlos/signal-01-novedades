@@ -17,6 +17,12 @@ export default class ControlFlowComponent {
 
   public nivel = signal<Nivel>('Eso');
 
+
+  public frameworks = signal<string[]>(['Angular', 'SolidJs', 'Vue', 'React']);
+  public frameworks2 = signal<string[]>([]);
+
+
+
   public changeContent() {
     this.showContent.update( ( value ) => !value )
   }
