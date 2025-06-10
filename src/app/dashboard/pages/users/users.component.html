@@ -1,1 +1,24 @@
-<p>users works!</p>,
+
+
+<app-title title="Listado de Usuarios"></app-title>
+
+<ul>
+    @for( user of userService.users(); track user.id ){
+    
+        <li class="flex items-center my-2">
+            <img [src]="user.avatar"
+                [alt]="user.first_name"
+                class="rounded w-20"
+             >
+            <a class="mx-3 hover:underline cursor-pointer"
+                [routerLink]="['/dashboard/user', user.id]"
+                >
+                {{ user.first_name }} {{ user.last_name }}
+            </a>
+            
+
+
+        </li>
+        
+    }
+</ul>
